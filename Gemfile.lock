@@ -11,6 +11,7 @@ GEM
     json (1.7.3)
     multi_json (1.3.5)
     multipart-post (1.1.5)
+    pg (0.13.2)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -34,6 +35,7 @@ PLATFORMS
 DEPENDENCIES
   haml
   json
+  pg
   sinatra (= 1.3.2)
   sinatra-activerecord (= 0.1.3)
   twitter

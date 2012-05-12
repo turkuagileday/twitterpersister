@@ -1,0 +1,30 @@
+body {
+	font-family: 'Helvetica';
+	padding: 0px;
+	margin: 0px;
+}
+#header {
+	background-color: #011F29;
+	height: 105px;
+	color: #fff;
+	padding: 15px;
+}
+thead {
+	background-color: #011F29;
+	color: #fff;
+}
+th {
+	text-align: left;
+}
+td {
+	padding: 4px;
+}
+td.date {
+	white-space: nowrap;
+}
+tr:nth-child(even) {
+	background-color: #ccc;
+}
+table {
+	border-collapse: collapse;
+}

@@ -12,4 +12,4 @@
 			%tr
 				%td= tweet.from_user
 				%td= tweet.text
-				%td= tweet.tweeted_at
+				%td{:class => 'date'}= tweet.tweeted_at.in_time_zone("Europe/Helsinki").strftime('%d.%m.%Y, %H:%M')

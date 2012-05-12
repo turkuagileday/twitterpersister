@@ -1,0 +1,15 @@
+#header
+	%h1 TAD '012 twiitit
+#content
+	%table
+		%thead
+			%tr
+				%th Käyttäjä
+				%th Twiitti
+				%th Milloin
+		%tbody
+		- @tweets.each do |tweet|
+			%tr
+				%td= tweet.from_user
+				%td= tweet.text
+				%td= tweet.tweeted_at

@@ -10,6 +10,8 @@
 		%tbody
 		- @tweets.each do |tweet|
 			%tr
-				%td= tweet.from_user
+				%td
+					%a{:href => "https://twitter.com/#{tweet.from_user}"}= tweet.from_user
 				%td= tweet.text
-				%td{:class => 'date'}= tweet.tweeted_at.in_time_zone("Europe/Helsinki").strftime('%d.%m.%Y, %H:%M')
+				%td{:class => 'date'}
+					%a{:href => "https://twitter.com/#{tweet.from_user}/status/#{tweet.twitter_id}"}= tweet.tweeted_at.in_time_zone("Europe/Helsinki").strftime('%d.%m.%Y, %H:%M')

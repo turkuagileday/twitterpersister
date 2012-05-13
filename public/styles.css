@@ -28,3 +28,11 @@ tr:nth-child(even) {
 table {
 	border-collapse: collapse;
 }
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	color: #888;
+	text-decoration: underline;
+}

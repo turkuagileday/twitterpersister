@@ -5,6 +5,9 @@ function replaceURLWithHTMLLinks(text) {
 }
 
 $(function() {
+	setInterval(function() {
+		window.location.reload();
+	}, 60000);
 	$("td:contains('http')").each(function() {
 		var txt = $(this).html();
 		var replaced = replaceURLWithHTMLLinks(txt);

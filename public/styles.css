@@ -1,16 +1,17 @@
 body {
-	font-family: 'Helvetica';
+	font-family: 'Kreon';
 	padding: 0px;
 	margin: 0px;
 }
 #header {
 	background-color: #011F29;
+	background-image: url('http://turkuagileday.fi/img/cite_bg.jpg');
 	height: 105px;
 	color: #fff;
 	padding: 15px;
 }
 thead {
-	background-color: #011F29;
+	/*background-color: #011F29;*/
 	color: #fff;
 }
 th {
@@ -27,6 +28,7 @@ tr:nth-child(even) {
 }
 table {
 	border-collapse: collapse;
+	margin-top: -20px;
 }
 a {
 	color: #000;

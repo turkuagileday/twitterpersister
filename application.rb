@@ -15,7 +15,7 @@ thread = Thread.new do
 	loop do
 		since = Tweet.maximum("twitter_id") || 0
 		puts since
-		Twitter.search('turkuagileday OR #tad012 OR #tad100 OR #tad013 OR #tad014', :rpp => 100, :since_id => since).results.map do |status|
+		Twitter.search('turkuagileday OR #tad012 OR #tad100 OR #tad013 OR #tad014 OR #tad13', :rpp => 100, :since_id => since).results.map do |status|
 			tweet = Tweet.new
 			tweet.tweeted_at = status.created_at
 			tweet.text = status.text

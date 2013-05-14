@@ -8,3 +8,8 @@ gem 'haml'
 gem 'sinatra-activerecord', '0.1.3'
 gem 'pg'
 gem 'activerecord'
+
+group :development do
+  gem "sqlite3"
+  gem "rake"
+end

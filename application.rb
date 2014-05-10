@@ -15,14 +15,18 @@ thread = Thread.new do
 	loop do
 		since = Tweet.maximum("twitter_id") || 0
 		puts since
-		Twitter.search('turkuagileday OR #tad012 OR #tad100 OR #tad013 OR #tad014 OR #tad13', :rpp => 100, :since_id => since).results.map do |status|
-			tweet = Tweet.new
-			tweet.tweeted_at = status.created_at
-			tweet.text = status.text
-			tweet.twitter_id = status.id
-			tweet.from_user = status.from_user
-			tweet.save!
-		end
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key    = "J8hbTKcpD5j6QkhSTLMxA"
+      config.consumer_secret = "qD2AZQ6192SaR5rTfrRmJUrUfqU3asozvKtxPnwBdzs"
+    end
+    client.search('turkuagileday OR #tad014', :count => 100, :since_id => since).map do |status|
+      tweet = Tweet.new
+      tweet.tweeted_at = status.created_at
+      tweet.text = status.text
+      tweet.twitter_id = status.id
+      tweet.from_user = status.user.screen_name
+      tweet.save!
+    end
 		sleep 60
 	end
 end

@@ -16,8 +16,8 @@ thread = Thread.new do
 		since = Tweet.maximum("twitter_id") || 0
 		puts since
     client = Twitter::REST::Client.new do |config|
-      config.consumer_key    = "J8hbTKcpD5j6QkhSTLMxA"
-      config.consumer_secret = "qD2AZQ6192SaR5rTfrRmJUrUfqU3asozvKtxPnwBdzs"
+      config.consumer_key    = ENV["TWITTER_KEY"]
+      config.consumer_secret = ENV["TWITTER_SECRET"]
     end
     client.search('turkuagileday OR #tad014', :count => 100, :since_id => since).map do |status|
       tweet = Tweet.new

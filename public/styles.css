@@ -6,9 +6,12 @@ body {
 #header {
 	background-color: #011F29;
 	background-image: url('http://turkuagileday.fi/img/cite_bg.jpg');
-	height: 105px;
+	height: 50px;
 	color: #fff;
 	padding: 15px;
+}
+#header h1 {
+  margin-top: 0px;
 }
 thead {
 	/*background-color: #011F29;*/

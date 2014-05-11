@@ -21,6 +21,6 @@ $(function() {
 
 	$("td:contains('#')").each(function() {
 		var txt = $(this).html();
-		$(this).html(txt.replace(/#([A-Za-z0-9]+)/g, '<a href="https://twitter.com/search?q=%23$1">$1</a>'));
+		$(this).html(txt.replace(/#([A-Za-z0-9]+)/g, '<a href="https://twitter.com/search?q=%23$1">#$1</a>'));
 	});
 });

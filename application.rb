@@ -29,7 +29,7 @@ class WebApp < Sinatra::Base
 	use ActiveRecord::ConnectionAdapters::ConnectionManagement
 
 	get '/' do
-		@tweets = Tweet.order('tweeted_at DESC')
+		@tweets = Tweet.order('tweeted_at DESC').limit(1000)
 		haml :index
 	end
 end
